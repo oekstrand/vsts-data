@@ -1,0 +1,65 @@
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+</head>
+
+<body>
+  <canvas id="myChart" width="400" height="200"></canvas>
+  <script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["2018-06-16", "2018-08-16"],
+        datasets: [{
+            label: 'Template Blades',
+                  lineTension: 0,
+
+            data: [66, 67],
+            backgroundColor: [
+              '#107c10'
+            ],
+            borderColor: [
+              '#107c10'
+            ],
+            borderWidth: 1
+          },
+          {
+            label: 'Blades with custom parts',
+            data: [26, 25],
+            lineTension: 0,
+            backgroundColor: [
+              '#aa00aa'
+            ],
+            borderColor: [
+              '#aa00aa'
+            ],
+            borderWidth: 1
+          },
+                    {
+            label: 'Blades with parts',
+            data: [18, 18],
+            lineTension: 0,
+            backgroundColor: [
+              '#da0a00'
+            ],
+            borderColor: [
+              '#da0a00'
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            stacked: true
+          }]
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
